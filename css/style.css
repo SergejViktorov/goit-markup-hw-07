@@ -11,7 +11,7 @@
   --icon-color: #afb1b8;
 
   --animation-duration: 250ms;
-  --animation-type: linear;
+  --animation-type: cubic-bezier(0.4, 0, 0.2, 1);
 }
 h1,
 h2,
@@ -31,18 +31,12 @@ ul {
   padding-left: 0;
 }
 body {
-  margin-right: 0;
   background-color: var(--secondary-accent-color);
   color: var(--primery-text-color);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.03em;
-}
-header {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
 }
 li {
   list-style: none;
@@ -69,19 +63,25 @@ img {
   height: 1px;
   margin: -1px;
 }
-/* header */
 .contaner {
   width: 1200px;
   margin-right: auto;
   margin-left: auto;
   padding: 0px 15px;
 }
-header .contaner {
+
+/* header */
+.page-header {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.page-header .contaner {
   display: flex;
   align-items: center;
 }
 
-.logo {
+.page-logo {
   padding-top: 24px;
   padding-bottom: 25px;
   margin-right: 93px;
@@ -91,102 +91,85 @@ header .contaner {
   font-size: 26px;
   line-height: 1.2;
 }
-.logo-start {
+.page-logo__start {
   color: var(--accent-color);
 }
 
-.nav-link {
+.page-header__links {
   display: flex;
-  transition-property: color;
-  transition-duration: 2500ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-link .item:not(:last-child) {
+.page-header__link-item:not(:last-child) {
   margin-right: 50px;
 }
-.nav-link :visited {
-  color: var(--primery-text-color);
-}
-.nav-link .current {
+
+.page-header__link--current {
   color: var(--accent-color);
 }
-.nav-link :hover,
-.nav-link :focus {
+.page-header__links :hover,
+.page-header__links :focus {
   color: var(--accent-color);
   outline: none;
 }
-.contakt {
-  display: flex;
-  margin-left: auto;
-}
-.contakt .list + .list {
-  margin-left: 50px;
-}
-.contakt-link {
-  color: var(--secondary-text-color);
-  display: flex;
-  align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.contakt-link:hover,
-.contakt-link:focus {
-  color: var(--accent-color);
-  outline: none;
-}
-.icon-mail {
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  fill: currentColor;
-}
-.icon-tel {
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
-  fill: currentColor;
-}
-.header-link {
+.page-header__link {
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--primery-text-color);
   transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-type);
 }
-.header-link::after {
+.page-header__link--current {
+  color: var(--accent-color);
+}
+
+.page-header__link::after {
   bottom: 0;
   left: 0;
   position: absolute;
   content: " ";
   width: 100%;
   height: 4px;
-  display: block;
   border-radius: 2px;
   background-color: var(--accent-color);
   opacity: 0;
   transition-property: opacity;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-type);
 }
-.current.header-link::after,
-.header-link:focus::after,
-.header-link:hover::after {
+.page-header__link--current::after,
+.page-header__link:focus::after,
+.page-header__link:hover::after {
   opacity: 1;
   outline: none;
 }
+.page-header__link--address:hover,
+.page-header__link--address:focus {
+  color: var(--accent-color);
+  outline: none;
+}
+.page-header__contakt {
+  display: flex;
+  margin-left: auto;
+}
+.page-header__contakt .list + .list {
+  margin-left: 50px;
+}
+.page-header__link--address {
+  display: flex;
+  color: var(--secondary-text-color);
+  align-items: center;
+}
 
+.page-header__icon-address {
+  margin-right: 10px;
+  fill: currentColor;
+}
 /**hero**/
 
 .overlay {
   max-width: 1600px;
-
   margin: auto;
-
   background-repeat: no-repeat;
   background-size: cover;
 }
