@@ -76,7 +76,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.page-header .contaner {
+.page-header__contaner {
   display: flex;
   align-items: center;
 }
@@ -161,7 +161,7 @@ img {
   align-items: center;
 }
 
-.page-header__icon-address {
+.page-header__icon--address {
   margin-right: 10px;
   fill: currentColor;
 }
