@@ -315,55 +315,51 @@
     <!-- подвал -->
     <footer class="footer">
         <div class="contaner ">
-            <div class="item">
-                <div class="footer-box">
-                    <a class="logo-footer" href="/index.html"> <span class="logo-start">Web</span>Studio</a>
-                </div>
+            <div>
+                    <a class="logo-footer" href="/index.html"> <span class="logo-footer--start">Web</span>Studio</a>
                 <address>
                     <ul class="address-list">
-                        <li class="item"> г. Киев, пр-т Леси Украинки, 26 </li>
-                        <li class="item"><a class="address-link" href="mailto:info@example.com">info@example.com</a>
+                        <li class="address-list__item"> г. Киев, пр-т Леси Украинки, 26 </li>
+                        <li class="address-list__item"><a class="address-list__link" href="mailto:info@example.com">info@example.com</a>
                         </li>
-                        <li class="item"><a class="address-link" href="tel:+380991111111">+380991111111</a></li>
+                        <li class="address-list__item"><a class="address-list__link" href="tel:+380991111111">+380991111111</a></li>
                     </ul>
                 </address>
             </div>
 
-            <div class="container-social">
+            <div class="footer-social">
                 <p class="footer-title">Присоединяйтесь</p>
                 <ul class="master-social">
-                    <li class="link"><a class="master-social__link social" href="">
-                            <svg class="master-social__icon">
+                    <li class="master-social__item"><a class="master-social__link social" href="">
+                            <svg class="master-social__icon footer-icon">
                                 <use href="./images/symbol-defs.svg#icon-instagram"></use>
                             </svg></a>
                     </li>
-                    <li class="link"><a class="master-social__link social" href="">
-                            <svg class="master-social__icon">
-                                <use class="item" href="./images/symbol-defs.svg#icon-twitter"></use>
+                    <li class="master-social__item"><a class="master-social__link social" href="">
+                            <svg class="master-social__icon footer-icon">
+                                <use href="./images/symbol-defs.svg#icon-twitter"></use>
                             </svg></a>
                     </li>
-                    <li class="link"><a class="master-social__link social" href="">
-                            <svg class="master-social__icon">
+                    <li class="master-social__item"><a class="master-social__link social" href="">
+                            <svg class="master-social__icon footer-icon">
                                 <use href="./images/symbol-defs.svg#icon-facebook"></use>
                             </svg></a>
                     </li>
-                    <li class="link"><a class="master-social__link social" href="">
-                            <svg class="master-social__icon">
+                    <li class="master-social__item"><a class="master-social__link social" href="">
+                            <svg class="master-social__icon footer-icon">
                                 <use href="./images/symbol-defs.svg#icon-linkedin"></use>
                             </svg></a>
                     </li>
                 </ul>
             </div>
-            <div class="container-form">
-                <form class="footer-form" autocomplete="off">
+            <div class="footer-form">
+                <form  autocomplete="off">
                 <label >
                     <span class="footer-title">Подпишитесь на рассылку</span>
-                <input class="footer-input" type="text" name="mail" placeholder="E-mail">
-                
-                
+                <input class="footer-form__input" type="text" name="mail" placeholder="E-mail">
                 </label>
                 <button class="footer-button">Подписаться
-                    <svg class="button-img" width="24" height="24">
+                    <svg class="footer-button__img" width="24" height="24">
                         <use href="./images/symbol-defs.svg#icon-icon-send-1-1"></use>
                     </svg>
                 </button>
@@ -371,6 +367,7 @@
             </div>
         </div>
     </footer>
+    <!-- modal -->
 <div class="backdrop is-hidden" data-modal>
     <div class="modal" data-backdrop>
         <button class="backdrop-button" data-modal-close><span class="batton-x">✖</span></button>
