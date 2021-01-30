@@ -1,18 +1,4 @@
-:root {
-  --primery-text-color: #212121;
-  --dark-background-color: #2f303a;
-  --lite-background-color: #f5f4fa;
-  --secondary-text-color: #757575;
-  --accent-color: #2196f3;
-  --secondary-accent-color: #ffffff;
-  --logo-head-color: #000000;
-  --footer-contacts: rgba(255, 255, 255, 0.6);
-  --new-background-color: #c4c4c4;
-  --icon-color: #afb1b8;
-
-  --animation-duration: 250ms;
-  --animation-type: cubic-bezier(0.4, 0, 0.2, 1);
-}
+@import "utils/variables";
 h1,
 h2,
 h3 {
@@ -31,9 +17,9 @@ ul {
   padding-left: 0;
 }
 body {
-  background-color: var(--secondary-accent-color);
-  color: var(--primery-text-color);
-  font-family: "Roboto", sans-serif;
+  background-color: $secondary-accent-color;
+  color: $primery-text-color;
+  font-family: $main-font-family;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.14;
@@ -80,14 +66,14 @@ img {
   padding-top: 24px;
   padding-bottom: 25px;
   margin-right: 93px;
-  color: var(--logo-head-color);
-  font-family: "Raleway", sans-serif;
+  color: $logo-head-color;
+  font-family: $sec-font-family;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
 }
 .page-logo--start {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .nav-links {
@@ -95,7 +81,7 @@ img {
 }
 .nav-links :hover,
 .nav-links :focus {
-  color: var(--accent-color);
+  color: $accent-color;
   outline: none;
 }
 .nav-links__item:not(:last-child) {
@@ -105,13 +91,13 @@ img {
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
-  color: var(--primery-text-color);
+  color: $primery-text-color;
   transition-property: color;
-  transition-duration: var(--animation-duration);
-  transition-timing-function: var(--animation-type);
+  transition-duration: $animation-duration;
+  transition-timing-function: $animation-type;
 }
 .nav-links__link--current {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 .nav-links__link::after {
   bottom: 0;
@@ -121,12 +107,12 @@ img {
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: var(--accent-color);
+  background-color: $accent-color;
   opacity: 0;
   display: block;
   transition-property: opacity;
-  transition-duration: var(--animation-duration);
-  transition-timing-function: var(--animation-type);
+  transition-duration: $animation-duration;
+  transition-timing-function: $animation-type;
 }
 .nav-links__link--current::after,
 .nav-links__link:focus::after,
@@ -136,7 +122,7 @@ img {
 }
 .contakt-list__link:hover,
 .contakt-list__link:focus {
-  color: var(--accent-color);
+  color: $accent-color;
   outline: none;
 }
 .contakt-list {
@@ -152,6 +138,9 @@ img {
   align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition-property: color;
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-type);
 }
 .contakt-list__icon {
   margin-right: 10px;
@@ -358,8 +347,8 @@ img {
   width: 44px;
   height: 44px;
   transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-type);
 }
 .master-social__link:focus,
 .master-social__link:hover {
@@ -396,8 +385,8 @@ img {
   border-radius: 4px;
   border: 1px solid var(--icon-color);
   transition-property: color, border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-type);
 }
 .client-list__link:focus,
 .client-list__link:hover {
@@ -421,7 +410,7 @@ img {
 }
 .logo-footer {
   color: var(--secondary-accent-color);
-  font-family: "Raleway", sans-serif;
+  font-family: var(--sec-font-family);
   font-size: 26px;
   line-height: 1.2;
   margin-bottom: 20px;
@@ -445,8 +434,8 @@ img {
 .address-list__link {
   color: var(--footer-contacts);
   transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-type);
 }
 .address-list__link:hover,
 .address-list__link:focus {
@@ -461,13 +450,13 @@ img {
   margin-left: 70px;
 }
 .footer-title {
-  font-family: "Roboto";
+  font-family: var(--main-font-family);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--secondary-accent-color);
   margin-bottom: 20px;
   margin-top: 0;
   display: block;
@@ -530,7 +519,7 @@ img {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: var(--secondary-accent-color);
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -543,7 +532,7 @@ img {
   margin-top: 8px;
   outline: none;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: var(--secondary-accent-color);
   border-radius: 50px;
   width: 30px;
   height: 30px;
@@ -555,8 +544,8 @@ img {
   display: block;
   font-family: none;
   transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-type);
 }
 .backdrop-button__icon:hover,
 .backdrop-button__icon:focus {
@@ -585,7 +574,7 @@ img {
   line-height: 14px;
   letter-spacing: 0.01em;
   position: absolute;
-  color: #757575;
+  color: var(--secondary-text-color);
   margin-bottom: 4px;
   transform: translateY(-1em -5px);
   display: block;
@@ -601,8 +590,8 @@ img {
   display: block;
   margin-bottom: 28px;
   transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-type);
 }
 .form-field__input:hover,
 .form-field__input:focus {
@@ -627,9 +616,8 @@ img {
 
   fill: currentColor;
   transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  width: 18px;
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-type);
   height: 18px;
 }
 
@@ -646,8 +634,8 @@ img {
   display: block;
   padding: 12px 16px;
   transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-type);
 }
 .form-field__textarea-input:focus,
 .form-field__textarea-input:hover {
@@ -751,8 +739,8 @@ img {
   line-height: 1.6;
   text-align: center;
   transition-property: color, background-color, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-type);
 }
 .buttons-menu__button:hover,
 .buttons-menu__button:focus {
@@ -782,9 +770,10 @@ img {
   width: 370px;
   height: 404px;
   transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-type);
 }
+
 .card-set__link:focus,
 .card-set__link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -809,15 +798,15 @@ img {
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
-  transition: 250ms ease;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-type);
 }
 .overlay-card__text {
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 1.55;
-  color: #fff;
+  color: var(--secondary-accent-color);
   padding: 63px 24px;
   width: 100%;
   height: 100%;
